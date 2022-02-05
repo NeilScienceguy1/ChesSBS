@@ -1,26 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Home from "./pages/Home"
-import HomeData from "./data/HomeData";
+import About from "./pages/About"
+import Error404 from "./components/404"
 
 const App = () => {
-  const HomePageProps = HomeData
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              title={HomePageProps.title}
-              subtitle={HomePageProps.subtitle}
-              buttonText={HomePageProps.buttonText}
-            />
-          }
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
