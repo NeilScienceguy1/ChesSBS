@@ -1,38 +1,30 @@
-import React from 'react'
-import HomeCard from '../components/HomeCard';
-import HomeNavbar from '../components/HomeNavbar';
-import HomeCardData from '../data/HomeCardData';
-import NavbarData from '../data/NavbarData';
-import { IHomePageProps } from "../types/HomePageData";
-import "../styles/index.css"
-import "../styles/navbar.css";
+import React, { useState } from "react";
+// import "./App.css";
+import HomeNavbar from "../components/Navbar";
+import HeroesSection from "../components/HeroesSection";
+import FeaturesSection from "../components/FeaturesSection";
 
-const Home = ({title, subtitle, buttonText}: IHomePageProps) => {
-    const data = HomeCardData
-    const NavbarProps = NavbarData
-    return (
-      <div className="container">
-        <HomeNavbar links={NavbarProps.links} logo={NavbarProps.logo} />
-        <div className="row">
-          <div className="col">
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
-            <button type="button">{buttonText}</button>
-          </div>
-          <div className="col">
-            {data.map((data) => {
-              return (
-                <HomeCard
-                  title={data.title}
-                  description={data.description}
-                  index={data.index}
-                />
-              );
-            })}
+function Home() {
+  return (
+    <div className="">
+      <div className="relative bg-gray-800 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative z-10 pb-8 bg-gray-800 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+            <HomeNavbar/>
+            <HeroesSection />
           </div>
         </div>
+        <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <img
+            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+            src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/RichardDai/phpSWK2Un.jpeg"
+            alt=""
+          />
+        </div>
       </div>
-    );
+      <FeaturesSection />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
