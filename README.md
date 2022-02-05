@@ -3,10 +3,8 @@ The code for the website for the ChesSBS Club of Step By Step School, Noida, Ind
 
 # File Structure
 
-- API: LEGACY CODE (V1 OF THE WEBSITE CODED IN NODEJS/EJS)
-- CLIENT: BETA CODE (V2 OF THE WEBSITE CODED IN REACT)
+- CLIENT: BETA CODE (V2 OF THE WEBSITE CODED IN REACT AND TYPESCRIPT)
 
-# Changes to Website Data
+# IMPORTANT
 
-- To change the data present on the website, you can navigate to client/src/data, where you can change the values in the corresponding files. 
-- IMPORTANT: DO NOT TOUCH THE OTHER FILES. ANY CHANGES TO THE STATIC DATA SHOULD ONLY BE MADE THROUGH THE DATA FOLDER.
+- DO NOT TOUCH CODE IN THE CONFIG FILES.
