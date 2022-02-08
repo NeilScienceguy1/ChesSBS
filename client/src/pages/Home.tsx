@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-// import "./App.css";
+import React from "react";
 import HomeNavbar from "../components/Navbar";
 import HeroesSection from "../components/HeroesSection";
 import FeaturesSection from "../components/FeaturesSection";
+import Footer from "../components/Footer";
+import HomeComponentSection from "../components/HomeComponentSection";
 
-function Home() {
+const Home = () => {
   return (
     <div className="">
       <div className="relative bg-gray-800 overflow-hidden">
@@ -23,6 +24,8 @@ function Home() {
         </div>
       </div>
       <FeaturesSection />
+      <HomeComponentSection/>
+      <Footer/>
     </div>
   );
 }
