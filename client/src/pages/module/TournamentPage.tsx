@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../components/layouts/Sidebar';
 import Tournaments from '../../components/Tournaments';
 
 const TournamentPage = () => {

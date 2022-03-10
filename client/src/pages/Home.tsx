@@ -1,9 +1,10 @@
 import React from "react";
-import HomeNavbar from "../components/Navbar";
-import HeroesSection from "../components/HeroesSection";
-import FeaturesSection from "../components/FeaturesSection";
-import Footer from "../components/Footer";
-import HomeComponentSection from "../components/HomeComponentSection";
+import HomeNavbar from "../components/layouts/Navbar";
+import HeroesSection from "../components/content/HeroesSection";
+import FeaturesSection from "../components/content/FeaturesSection";
+import Footer from "../components/layouts/Footer";
+import HomeComponentSection from "../components/content/HomeComponentSection";
+import NavbarData from "../data/NavbarData";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <div className="relative bg-gray-800 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="relative z-10 pb-8 bg-gray-800 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-            <HomeNavbar/>
+            <HomeNavbar links={NavbarData.links} logo={NavbarData.logo}/>
             <HeroesSection />
           </div>
         </div>

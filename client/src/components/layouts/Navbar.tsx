@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
+import { INavbarProps } from "../../types/NavbarProps";
 
-const HomeNavbar = () => {
+
+const HomeNavbar: React.FC<INavbarProps> = ({logo, links}) => {
   const [isOpen, setOpen] = useState<Boolean>(false);
   return (
     <div className={`${isOpen ? "mb-60" : ""}`}>
@@ -26,9 +28,10 @@ const HomeNavbar = () => {
                 <Link to="/">
                   <img
                     className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    src={logo}
+                    alt="logo"
                   />
-                  {/* <h1 className="sr-only">Workflow</h1> */}
+                  {/* https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg*/}
                 </Link>
                 <div className={`-mr-2 flex items-center md:hidden`}>
                   <button
@@ -61,40 +64,16 @@ const HomeNavbar = () => {
               </div>
             </div>
             <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8 z-20">
-              <Link
-                to="/"
-                className="font-medium text-white hover:text-indigo-500"
-              >
-                Home
-              </Link>
-
-              <Link
-                to="/about"
-                className="font-medium text-white hover:text-indigo-500"
-              >
-                About
-              </Link>
-
-              <Link
-                to="#"
-                className="font-medium text-white hover:text-indigo-500"
-              >
-                Dashboard
-              </Link>
-
-              <Link
-                to="#"
-                className="font-medium text-white hover:text-indigo-500"
-              >
-                Resources
-              </Link>
-
-              <Link
-                to="#"
-                className="font-medium text-indigo-600 hover:text-indigo-500"
-              >
-                Log in
-              </Link>
+              {links.map(link => {
+                return (
+                  <Link
+                    to={link.href}
+                    className={`font-medium ${link.defaultColor === "white" ? "text-white" : "text-indigo-600"} hover:text-indigo-500`}
+                  >
+                    {link.text}
+                  </Link>
+                );
+              })}
             </div>
           </nav>
         </div>

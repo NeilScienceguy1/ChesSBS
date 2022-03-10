@@ -1,6 +1,6 @@
 import React from 'react';
 import Leaderboard from "../../components/Leaderboard";
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "../../components/layouts/Sidebar";
 
 const LeaderboardPage = () => {
   return (

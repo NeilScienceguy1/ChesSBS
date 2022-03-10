@@ -1,7 +1,8 @@
 import React from "react";
-import HomeNavbar from "../components/Navbar";
-import TeamSection from "../components/TeamSection";
-import Footer from "../components/Footer";
+import HomeNavbar from "../components/layouts/Navbar";
+import TeamSection from "../components/content/TeamSection";
+import Footer from "../components/layouts/Footer";
+import NavbarData from "../data/NavbarData";
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
       <div className="relative bg-gray-800 overflow-hidden z-10">
         <div className="max-w-7xl mx-auto">
           <div className="relative z-10 pb-8 bg-gray-800 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-            <HomeNavbar />
+            <HomeNavbar links={NavbarData.links} logo={NavbarData.logo} />
           </div>
         </div>
       </div>

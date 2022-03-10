@@ -1,9 +1,9 @@
 import React from "react";
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "../../components/layouts/Sidebar";
 import Stats from "../../components/Stats";
 import DashboardComponent from "../../components/DashboardComponent";
 import Table from "../../components/Table";
-import Footer from "../../components/Footer";
+import Footer from "../../components/layouts/Footer";
 
 const DashboardApp = () => {
   return (
